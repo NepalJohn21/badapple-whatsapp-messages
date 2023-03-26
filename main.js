@@ -80,6 +80,7 @@ window.onload = () => {
     document.getElementsByTagName("button")[2].onclick = () => {
         setInterval(() => {
             if (!(frame == 6571)) {
+                frame++
                 document.querySelector('input[type="file"]').src = "https://raw.githubusercontent.com/pikapower9080/bad-apple-frames/main/frames/" + String(frame).padStart(3, "0") + ".jpg"
             }
         }, 33);
