@@ -1,4 +1,5 @@
 var _image;
+var frame = 0
 window.onload = () => {
     document.querySelector('input[type="file"]').onchange = async (e) => {
         const canvas = await new Promise((resolve, _) => {
@@ -77,9 +78,11 @@ window.onload = () => {
         location.reload();
     }
     document.getElementsByTagName("button")[2].onclick = () => {
-        for (let i = 0; i < 6571; i++) {
-            document.querySelector('input[type="file"]').src = "https://raw.githubusercontent.com/pikapower9080/bad-apple-frames/main/frames/" + String(i).padStart(3, "0") + ".jpg"
-        }
+        setInterval(() => {
+            if (!(frame == 6571)) {
+                document.querySelector('input[type="file"]').src = "https://raw.githubusercontent.com/pikapower9080/bad-apple-frames/main/frames/" + String(i).padStart(3, "0") + ".jpg"
+            }
+        }, 33);
     }
     document.querySelector('input[type="number"]').onchange = () => {
         document.getElementsByTagName('input')[0].dispatchEvent(new Event('change'));
