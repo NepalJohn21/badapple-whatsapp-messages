@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+}
+body {
+    overflow: hidden;
+    background: #333;
+    color: #eee;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+input[type="file"] {
+    color: #333;
+}
+textarea {
+    flex: 1 1;
+    white-space: pre;
+    color: white;
+    background-color: #bbb;
+    resize: none;
+}
+textarea::-webkit-scrollbar {
+    border-radius: 10px;
+    background-color: #eee;
+}
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #555;
+}
+textarea::-webkit-scrollbar-corner {
+    visibility: hidden;
+}
+#options {
+    flex-direction: column;
+    border-left: 10px solid #333;
+}
+#options > div {
+    padding-top: 10%;
+}
+#options > div > a {
+    display: grid;
+    place-items: center;
+}
+button {
+    cursor: pointer;
+}
+#ondrag {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .3);
+    place-items: center;
+    font-size: xx-large;
+    border: thick dashed rgba(0, 0, 0, .3);
+    color:rgba(0, 0, 0, .3);
+}
