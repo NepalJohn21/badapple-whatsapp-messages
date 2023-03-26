@@ -76,6 +76,11 @@ window.onload = () => {
     document.getElementsByTagName("button")[1].onclick = () => {
         location.reload();
     }
+    document.getElementsByTagName("button")[2].onclick = () => {
+        for (let i = 0; i < 6571; i++) {
+            document.querySelector('input[type="file"]').src = "https://raw.githubusercontent.com/pikapower9080/bad-apple-frames/main/frames/" + String(i).padStart(3, "0") + ".jpg"
+        }
+    }
     document.querySelector('input[type="number"]').onchange = () => {
         document.getElementsByTagName('input')[0].dispatchEvent(new Event('change'));
     }
